@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2AB8FF2B07FFBE000277AC /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AB8FE2B07FFBE000277AC /* SwiftUIView.swift */; };
 		8CD20D392AFB52F300F33C81 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD20D382AFB52F300F33C81 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +24,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C2AB8FE2B07FFBE000277AC /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		8CD20D352AFB52F300F33C81 /* 100DaysOfSwiftUI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 100DaysOfSwiftUI; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD20D382AFB52F300F33C81 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8CD20D422AFB53F500F33C81 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CD20D432AFB54EB00F33C81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8CD20D452AFC4DFB00F33C81 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8CD20D482AFDE25500F33C81 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8CF747792B01DD0900C30F95 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8CF7477B2B01E98100C30F95 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2AB8FD2B07FF53000277AC /* WeSplit */ = {
+			isa = PBXGroup;
+			children = (
+				8C2AB8FE2B07FFBE000277AC /* SwiftUIView.swift */,
+			);
+			path = WeSplit;
+			sourceTree = "<group>";
+		};
 		8CD20D2C2AFB52F300F33C81 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 		8CD20D372AFB52F300F33C81 /* 100DaysOfSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8C2AB8FD2B07FF53000277AC /* WeSplit */,
 				8CD20D3F2AFB53B600F33C81 /* Days1-13 */,
 				8CD20D382AFB52F300F33C81 /* main.swift */,
 			);
@@ -70,8 +84,11 @@
 		8CD20D3F2AFB53B600F33C81 /* Days1-13 */ = {
 			isa = PBXGroup;
 			children = (
+				8CF7477A2B01E96E00C30F95 /* closures practice */,
+				8CF747782B01DCF300C30F95 /* 10-14 */,
 				8CD20D402AFB53CB00F33C81 /* 1-6 */,
-				8CD20D442AFC4DC600F33C81 /* 7-10 */,
+				8CD20D442AFC4DC600F33C81 /* 7-8 */,
+				8CD20D472AFDE23D00F33C81 /* 9-10 */,
 			);
 			path = "Days1-13";
 			sourceTree = "<group>";
@@ -84,12 +101,36 @@
 			path = "1-6";
 			sourceTree = "<group>";
 		};
-		8CD20D442AFC4DC600F33C81 /* 7-10 */ = {
+		8CD20D442AFC4DC600F33C81 /* 7-8 */ = {
 			isa = PBXGroup;
 			children = (
 				8CD20D452AFC4DFB00F33C81 /* MyPlayground.playground */,
 			);
-			path = "7-10";
+			path = "7-8";
+			sourceTree = "<group>";
+		};
+		8CD20D472AFDE23D00F33C81 /* 9-10 */ = {
+			isa = PBXGroup;
+			children = (
+				8CD20D482AFDE25500F33C81 /* MyPlayground.playground */,
+			);
+			path = "9-10";
+			sourceTree = "<group>";
+		};
+		8CF747782B01DCF300C30F95 /* 10-14 */ = {
+			isa = PBXGroup;
+			children = (
+				8CF747792B01DD0900C30F95 /* MyPlayground.playground */,
+			);
+			path = "10-14";
+			sourceTree = "<group>";
+		};
+		8CF7477A2B01E96E00C30F95 /* closures practice */ = {
+			isa = PBXGroup;
+			children = (
+				8CF7477B2B01E98100C30F95 /* MyPlayground.playground */,
+			);
+			path = "closures practice";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2AB8FF2B07FFBE000277AC /* SwiftUIView.swift in Sources */,
 				8CD20D392AFB52F300F33C81 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
