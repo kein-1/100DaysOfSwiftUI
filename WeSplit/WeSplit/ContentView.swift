@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var peopleCount = 1
     @State private var tipPercent = 0
-    @FocusState private var focused : Bool // mostly used for
+    @FocusState private var focused : Bool // mostly used for focus/textfields. don't need to assign a value to it b/c we use @FocusState
     
     // Computed property
     var totalCheckAmount : Double {
@@ -33,7 +33,7 @@ struct ContentView: View {
                         TextField("", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .multilineTextAlignment(.trailing) // right aligns!
                             .keyboardType(.decimalPad)
-                            .focused($focused)
+                            .focused($focused) // focus here is true if focuseed, otehrwise false
                     }
                 }
                 Section {
@@ -67,6 +67,10 @@ struct ContentView: View {
                         Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
                     
+                    Button("clcik") {
+                        print(focused)
+                        focused.toggle()
+                    }
                 }
                 
                 Section {
@@ -85,7 +89,7 @@ struct ContentView: View {
             }
             .tint(.blue)
             .navigationTitle("Tip App")
-            .toolbar{ // toolbar used to
+            .toolbar{ // toolbar used to get out of focued state. will only run if focused is true
                 if focused {
                     Button("Done") {
                         focused = false
