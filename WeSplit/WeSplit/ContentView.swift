@@ -14,6 +14,9 @@ struct ContentView: View {
     @State private var tipPercent = 0
     @FocusState private var focused : Bool // mostly used for focus/textfields. don't need to assign a value to it b/c we use @FocusState
     
+    
+    @State private var randomVariable = 0
+    
     // Computed property
     var totalCheckAmount : Double {
         checkAmount  + Double(tipPercent) / 100 * checkAmount
@@ -84,6 +87,13 @@ struct ContentView: View {
                         }
                         .buttonStyle(.plain)
                         .cornerRadius(10)
+                        
+                        Button("Reset22") {
+                            randomVariable = doSomething()
+                            print(peopleCount)
+                        }
+                        .buttonStyle(.plain)
+                        .cornerRadius(10)
                     }
                 }
             }
@@ -101,6 +111,11 @@ struct ContentView: View {
     }
 
 }
+
+func doSomething() -> Int {
+    return 123
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
