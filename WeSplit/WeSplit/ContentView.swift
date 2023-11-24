@@ -62,6 +62,7 @@ struct ContentView: View {
                         Text("Grand Total : ")
                         Spacer()
                         Text(totalCheckAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            .foregroundColor(tipPercent == 0 ? .red : .primary)
                             
                     }
                     HStack{
@@ -69,11 +70,7 @@ struct ContentView: View {
                         Spacer()
                         Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
-                    
-                    Button("clcik") {
-                        print(focused)
-                        focused.toggle()
-                    }
+                
                 }
                 
                 Section {
@@ -88,12 +85,7 @@ struct ContentView: View {
                         .buttonStyle(.plain)
                         .cornerRadius(10)
                         
-                        Button("Reset22") {
-                            randomVariable = doSomething()
-                            print(peopleCount)
-                        }
-                        .buttonStyle(.plain)
-                        .cornerRadius(10)
+                      
                     }
                 }
             }
