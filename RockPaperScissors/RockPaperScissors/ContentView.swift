@@ -106,28 +106,35 @@ struct ContentView: View {
     var GameBoard : some View {
         VStack{
             HStack {
-                Text("You : \(playerScore)")
+                Text("You : \(playerScore)").textModifier()
                 Spacer()
-                Text("Computer : \(computerScore)")
+                Text("Computer : \(computerScore)").textModifier()
             }
             
             VStack {
                 Text("You chose \(playerChoice.0)")
+                    .padding()
                 Image(systemName: playerChoice.1 )
-                    .font(.largeTitle)
+                    .font(.system(size: 60))
             }
             
+            Spacer()
+            
             VStack {
-                Text("Computer chose \(computerChoice.0)")
+                Text("Computer chose \(computerChoice.0)").padding()
                 Image(systemName: computerChoice.1)
-                    .font(.largeTitle)
+                    .font(.system(size: 60))
             }
+            Spacer()
             
             if winner == "Tie" {
                 Text("There is a tie!")
             } else {
-                Text("The winner is \(winner)")
+                Text("The winner is \(winner) !")
+                    .font(.title3.bold())
+                    .foregroundColor(.blue)
             }
+            Spacer()
         }
     }
     
@@ -180,6 +187,30 @@ struct MyButtonStyle : ButtonStyle {
             .cornerRadius(5.0)
     }
 }
+
+// Custom text modifier for practice : apple recommends combining view modifier + extensions
+// So create the struct, then use extension with .modifier and pass in this val
+// struct must have a body and content. content refers to the actual view using it. So here its Text
+// Using Extension with this is cleanr so we don't need to apply .modifier to the view itself when calling it. We instead
+// apply it as an extension :
+
+// So instead of doing Text("hi).modifier(custom struct), we just do Text("hi).function name . This is how we access the stuff in extensions
+struct ScoreTextModifier : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .foregroundColor(.primary)
+            .padding()
+    }
+}
+
+
+extension View {
+    func textModifier() -> some View {
+        modifier(ScoreTextModifier())
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

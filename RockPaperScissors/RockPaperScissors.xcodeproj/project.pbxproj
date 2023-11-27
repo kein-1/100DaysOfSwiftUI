@@ -11,6 +11,8 @@
 		8C93BE142B112561006759AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C93BE132B112561006759AC /* ContentView.swift */; };
 		8C93BE162B112563006759AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C93BE152B112563006759AC /* Assets.xcassets */; };
 		8C93BE192B112563006759AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C93BE182B112563006759AC /* Preview Assets.xcassets */; };
+		8C93BE222B154AC4006759AC /* RPS2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C93BE202B154AC4006759AC /* RPS2.png */; };
+		8C93BE232B154AC4006759AC /* RPS1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C93BE212B154AC4006759AC /* RPS1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8C93BE132B112561006759AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C93BE152B112563006759AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C93BE182B112563006759AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C93BE202B154AC4006759AC /* RPS2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPS2.png; sourceTree = "<group>"; };
+		8C93BE212B154AC4006759AC /* RPS1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPS1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		8C93BE102B112561006759AC /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				8C93BE1F2B154AA3006759AC /* Screenshots */,
 				8C93BE112B112561006759AC /* RockPaperScissorsApp.swift */,
 				8C93BE132B112561006759AC /* ContentView.swift */,
 				8C93BE152B112563006759AC /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				8C93BE182B112563006759AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C93BE1F2B154AA3006759AC /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				8C93BE212B154AC4006759AC /* RPS1.png */,
+				8C93BE202B154AC4006759AC /* RPS2.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C93BE192B112563006759AC /* Preview Assets.xcassets in Resources */,
+				8C93BE222B154AC4006759AC /* RPS2.png in Resources */,
 				8C93BE162B112563006759AC /* Assets.xcassets in Resources */,
+				8C93BE232B154AC4006759AC /* RPS1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
