@@ -9,50 +9,66 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var wakeUp = Date.now
+    @State private var wakeUp = defaultWakeTime
     @State private var sleepAmount = 8.0
     @State private var coffeeAmount = 1
     
     @State private var alertTitle = ""
-    @State private var alertMessage = ""
+    private var bedTime : String {
+        calculateBedTime()
+    }
+    
+    
     @State private var showAlert = false
+    
+    static var defaultWakeTime : Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? .now
+    }
     
     
     var body: some View {
         NavigationStack{
-            VStack{
-                Text("When do you want to wake up ? ")
-                    .font(.headline)
+            Form {
                 
-                DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: [.hourAndMinute]).labelsHidden()
+                Section {
+                    DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: [.hourAndMinute]).labelsHidden()
+                } header: {
+                    Text("What time do you wake up?")
+                        .bold()
+                }
+
+                Section ("Enter Hours of Sleep"){
+                    Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+                        Label("\(sleepAmount.formatted())", systemImage: "bed.double")
+                    }
+                }
                 
-                Stepper("Enter hours slept : \(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                Section ("Enter Coffe Drank"){
+                    Picker("\(coffeeAmount.formatted())", selection: $coffeeAmount) {
+                        ForEach(1..<11){ number in
+                            Text("\(number)").tag(number)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
                 
-                Stepper("Enter coffee drank : \(coffeeAmount)", value: $coffeeAmount, in: 1...10)
-                
-                Text(wakeUp.formatted())
+                Section("Your ideal Bedtime is") {
+                    Text(bedTime)
+                        .font(.largeTitle.bold())
+                        .foregroundColor(.primary)
+                }
             }
             .padding()
             .navigationTitle("Better Rest")
-            .toolbar {
-                ToolbarItem {
-                    Button("Calculate bed time"){
-                        calculateBedTime()
-                    }
-                }
-            }
-            .alert(alertTitle, isPresented: $showAlert) {
-                Button("Dismiss") { }
-            } message: {
-                Text(alertMessage)
-            }
-
         }
     }
     
     // use do/catch/ try since the ML model can throw an error
     // try is used inside a do block indicating this function can throw an error
-    func calculateBedTime() {
+    func calculateBedTime() -> String {
         do {
             let config = MLModelConfiguration()
             let model = try SleepCalculator(configuration: config)
@@ -68,14 +84,19 @@ struct ContentView: View {
             
             let sleepTime = wakeUp - prediction.actualSleep
             
-            alertTitle = "Your ideal bed time is :"
-            alertMessage = sleepTime.formatted(date: .omitted, time: .complete)
-
+            
+            // .formatted for dates use DateFormatter() under the hood. sleepTime is a Date() object
+            // so with this, we modify to use the local time zone of the user
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeZone = TimeZone.current
+            dateFormatter.timeStyle = .medium
+            
+            // .formatted for dates use DateFormatter() under the hood
+            return dateFormatter.string(from: sleepTime)
         } catch {
             alertTitle = "Error"
-            alertMessage = "Sorry, there was a problem calculating your bedtime."
+            return("Sorry, there was a problem calculating your bedtime.")
         }
-        showAlert = true
     }
 }
 
