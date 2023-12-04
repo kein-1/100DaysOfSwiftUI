@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+
+// Cover : add a timer as well for how long spent on each question
+// add a score for number of correct
+// consider using a numb pad of 10 digits : 0 - 9 (use grid)
+// then submit button (enter) which will then check whether
+// it was correct or not, and also generate a new question
+
+
 struct ContentView: View {
     
     
@@ -15,43 +23,55 @@ struct ContentView: View {
     
     @State private var activeGame = false
     @State private var tables = 2
-    @State private var questions = 5
-    @State private var currImage = imagesArr.randomElement()!
+    @State private var questionCount = 5
+    @State private var currImageIndex = Int.random(in: 0...imagesArr.count - 1)
     
     @State private var userScore = 0
+    @State private var questionBank = [Question]()
+    
+    
     
     var body: some View {
         NavigationStack {
             VStack{
-                Image(currImage)
+                Image(ContentView.imagesArr[currImageIndex])
                     .frame(width: 150, height: 150)
                 
                 Spacer()
                 if activeGame {
-                    
                     VStack {
-                        Text("put the active game view here")
-                        Text("\(tables) + \(questions)")
+                        GameView(activeGame: $activeGame, currImageIndex: $currImageIndex, currentQuestion: questionBank[0], questionBank : questionBank)
                     }
                 } else {
-                    StartView(activeGame: $activeGame, tables: $tables, questions: $questions)
+                    StartView(activeGame: $activeGame,  questionBank: $questionBank)
                 }
                 
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
+            .padding(20)
             .navigationTitle("Multiply!")
             .background(LinearGradient(
-                gradient: Gradient(colors: [.blue, .green]),
+                gradient: Gradient(colors: [.white, .cyan ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             ))
+            .toolbar {
+                if activeGame {
+                    Button("Reset game"){
+                        activeGame = false
+                    }
+                }
+            }
         }
     }
 }
 
 
+struct Question : Equatable, Hashable {
+    var question : String
+    var answer : Int
+}
 
 
 
