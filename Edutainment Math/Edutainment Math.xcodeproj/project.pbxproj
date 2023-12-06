@@ -15,8 +15,8 @@
 		8C2759872B1D201900AFFC76 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2759862B1D201900AFFC76 /* GameView.swift */; };
 		8C27598C2B1E8C8900AFFC76 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27598B2B1E8C8900AFFC76 /* NumberPadView.swift */; };
 		8C27598E2B1F901A00AFFC76 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27598D2B1F901A00AFFC76 /* Question.swift */; };
-		8C2759922B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */; };
-		8C2759932B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */; };
+		8C2759922B21206C00AFFC76 /* SS1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759902B21206C00AFFC76 /* SS1.png */; };
+		8C2759932B21206C00AFFC76 /* SS2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759912B21206C00AFFC76 /* SS2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		8C27598A2B1D675000AFFC76 /* ExtensionResources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ExtensionResources.md; sourceTree = "<group>"; };
 		8C27598B2B1E8C8900AFFC76 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		8C27598D2B1F901A00AFFC76 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png"; sourceTree = "<group>"; };
-		8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png"; sourceTree = "<group>"; };
+		8C2759902B21206C00AFFC76 /* SS1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS1.png; sourceTree = "<group>"; };
+		8C2759912B21206C00AFFC76 /* SS2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		8C27598F2B211BF800AFFC76 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */,
-				8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */,
+				8C2759902B21206C00AFFC76 /* SS1.png */,
+				8C2759912B21206C00AFFC76 /* SS2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -153,8 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C2759922B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png in Resources */,
-				8C2759932B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png in Resources */,
+				8C2759922B21206C00AFFC76 /* SS1.png in Resources */,
+				8C2759932B21206C00AFFC76 /* SS2.png in Resources */,
 				8C27597E2B1CF7AD00AFFC76 /* Preview Assets.xcassets in Resources */,
 				8C27597B2B1CF7AD00AFFC76 /* Assets.xcassets in Resources */,
 			);
