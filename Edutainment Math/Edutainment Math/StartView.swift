@@ -17,9 +17,10 @@ struct StartView : View {
     @State private var tables = 2
     @State private var questionCount = 5
     
+    
+    
     let questionsArr = [5,10,15,20,25]
     
-    let numbersArrayOne = Array(0..<10).shuffled()
 
     var body: some View{
         VStack {
@@ -27,7 +28,7 @@ struct StartView : View {
             
             VStack(alignment: .center) {
                 
-                Text("Practice which tables? \(tables)")
+                Text("Practice up to \(tables) times tables")
                     .font(.title3.bold())
                 
                 // Use labelsHidden to hide the text center
@@ -60,9 +61,13 @@ struct StartView : View {
     
     var ButtonView : some View {
             
+        // Add withAnimiation to this state. So any stuff associated
+        // with this state will have the animaiton
         Button {
             updateSettings()
-            activeGame = true
+            withAnimation {
+                activeGame = true
+            }
         } label: {
             Text("Start Game!")
                 .padding()
@@ -74,6 +79,7 @@ struct StartView : View {
     }
     
     func updateSettings(){
+        let numbersArrayOne = Array(0..<tables).shuffled()
         let numbersArrayTwo = Array(0..<tables).shuffled()
         
         while questionBank.count < questionCount {
@@ -87,6 +93,7 @@ struct StartView : View {
                 questionBank.append(question)
             }
         }
+        questionBank.shuffle()
     }
     
 }

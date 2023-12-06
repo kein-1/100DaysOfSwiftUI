@@ -14,6 +14,9 @@
 		8C2759852B1D01E600AFFC76 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2759842B1D01E600AFFC76 /* StartView.swift */; };
 		8C2759872B1D201900AFFC76 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2759862B1D201900AFFC76 /* GameView.swift */; };
 		8C27598C2B1E8C8900AFFC76 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27598B2B1E8C8900AFFC76 /* NumberPadView.swift */; };
+		8C27598E2B1F901A00AFFC76 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27598D2B1F901A00AFFC76 /* Question.swift */; };
+		8C2759922B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */; };
+		8C2759932B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8C2759862B1D201900AFFC76 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		8C27598A2B1D675000AFFC76 /* ExtensionResources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ExtensionResources.md; sourceTree = "<group>"; };
 		8C27598B2B1E8C8900AFFC76 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
+		8C27598D2B1F901A00AFFC76 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png"; sourceTree = "<group>"; };
+		8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		8C2759752B1CF7AB00AFFC76 /* Edutainment Math */ = {
 			isa = PBXGroup;
 			children = (
+				8C27598F2B211BF800AFFC76 /* Screenshots */,
 				8C2759762B1CF7AB00AFFC76 /* Edutainment_MathApp.swift */,
 				8C2759782B1CF7AB00AFFC76 /* ContentView.swift */,
 				8C2759842B1D01E600AFFC76 /* StartView.swift */,
@@ -66,6 +73,7 @@
 				8C27597C2B1CF7AD00AFFC76 /* Preview Content */,
 				8C27598A2B1D675000AFFC76 /* ExtensionResources.md */,
 				8C27598B2B1E8C8900AFFC76 /* NumberPadView.swift */,
+				8C27598D2B1F901A00AFFC76 /* Question.swift */,
 			);
 			path = "Edutainment Math";
 			sourceTree = "<group>";
@@ -76,6 +84,15 @@
 				8C27597D2B1CF7AD00AFFC76 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C27598F2B211BF800AFFC76 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				8C2759902B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png */,
+				8C2759912B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2759922B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.33.39.png in Resources */,
+				8C2759932B21206C00AFFC76 /* Simulator Screenshot - iPhone 14 Pro - 2023-12-06 at 16.34.10.png in Resources */,
 				8C27597E2B1CF7AD00AFFC76 /* Preview Assets.xcassets in Resources */,
 				8C27597B2B1CF7AD00AFFC76 /* Assets.xcassets in Resources */,
 			);
@@ -151,6 +170,7 @@
 				8C2759852B1D01E600AFFC76 /* StartView.swift in Sources */,
 				8C2759792B1CF7AB00AFFC76 /* ContentView.swift in Sources */,
 				8C27598C2B1E8C8900AFFC76 /* NumberPadView.swift in Sources */,
+				8C27598E2B1F901A00AFFC76 /* Question.swift in Sources */,
 				8C2759872B1D201900AFFC76 /* GameView.swift in Sources */,
 				8C2759772B1CF7AB00AFFC76 /* Edutainment_MathApp.swift in Sources */,
 			);

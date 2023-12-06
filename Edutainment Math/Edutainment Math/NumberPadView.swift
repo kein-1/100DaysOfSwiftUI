@@ -13,7 +13,6 @@ import SwiftUI
 struct NumberPadView : View {
     
     @Binding var userAnswer : String
-    
     let columns : [GridItem] = [
         GridItem(.flexible(), spacing: nil, alignment: nil),
         GridItem(.flexible(), spacing: nil, alignment: nil),
@@ -30,8 +29,8 @@ struct NumberPadView : View {
     
     var body : some View{
         VStack {
-            Text("User answer : \(userAnswer)")
             // Lazy VGrid, means contents will be loaded as they appear on the screen
+            
             LazyVGrid(columns: columns) {
                 ForEach(rows, id : \.self){ row in
                     ForEach(row, id: \.self) { buttonTitle in
@@ -40,6 +39,7 @@ struct NumberPadView : View {
                         } label: {
                             Text("\(buttonTitle)")
                         }
+                        .buttonStyle(.numbPadStyle)
                     }
                 }
             }
@@ -47,9 +47,9 @@ struct NumberPadView : View {
         .padding()
     }
     
-    // Function called for each button 
+    // Function called for each button
     func buttonHelper(_ value : String){
-        if let intVal = Int(value) {
+        if Int(value) != nil {
             userAnswer += value
         } else {
             if value == "⌫" {
@@ -63,11 +63,29 @@ struct NumberPadView : View {
     
 }
 
+struct NumbPadButtonStyle : ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.system(.title2, weight: .heavy))
+            .foregroundColor(.white)
+            .frame(width: 60, height: 60)
+            .background(.purple)
+            .cornerRadius(14)
+            .scaleEffect(configuration.isPressed ? 1.15 : 1) // gives a tapping look animation
+    }
+}
+
+extension ButtonStyle where Self == NumbPadButtonStyle{
+    static var numbPadStyle : NumbPadButtonStyle {
+        NumbPadButtonStyle()
+    }
+}
+
 
 
 
 //struct NumberPadView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NumberPadView()
+//        NumberPadView(userAnswer: .constant(""))
 //    }
 //}

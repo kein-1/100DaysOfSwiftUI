@@ -35,18 +35,21 @@ struct ContentView: View {
         NavigationStack {
             VStack{
                 Image(ContentView.imagesArr[currImageIndex])
-                    .frame(width: 150, height: 150)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: activeGame ? 115 : 150 , height: activeGame ? 115 : 150)
+                    .padding()
                 
                 Spacer()
                 if activeGame {
-                    VStack {
-                        GameView(activeGame: $activeGame, currImageIndex: $currImageIndex, currentQuestion: questionBank[0], questionBank : questionBank)
-                    }
+                    GameView(activeGame: $activeGame, currImageIndex: $currImageIndex, questionBank : $questionBank, currentQuestion: questionBank[0])
+                        .transition(.scale)
+                        .animation(.easeInOut, value: activeGame)
                 } else {
                     StartView(activeGame: $activeGame,  questionBank: $questionBank)
+                        .transition(.scale)
+                        .animation(.easeInOut, value: activeGame)
                 }
-                
-                Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(20)
@@ -56,21 +59,18 @@ struct ContentView: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             ))
+            .foregroundColor(.white)
             .toolbar {
                 if activeGame {
                     Button("Reset game"){
-                        activeGame = false
+                        withAnimation {
+                            activeGame = false
+                        }
                     }
                 }
             }
         }
     }
-}
-
-
-struct Question : Equatable, Hashable {
-    var question : String
-    var answer : Int
 }
 
 
