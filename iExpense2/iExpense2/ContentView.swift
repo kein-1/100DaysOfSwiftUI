@@ -48,9 +48,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-                
             ChartView(expenses: expenses.personalPerCategory)
-            
             List {
                 Section {
                     ForEach(expenses.personal, id: \.id){ expense in
