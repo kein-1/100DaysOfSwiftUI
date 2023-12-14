@@ -20,7 +20,7 @@ struct ChartView: View {
                 SectorMark(
                     angle: .value("expense", expenses[name] ?? 0.0),
                     innerRadius: .ratio(0.5),
-                    outerRadius: .fixed(250),
+                    outerRadius: .fixed(150),
                     angularInset: 3
                 )
                 .foregroundStyle(by: .value("type", name))
@@ -31,7 +31,9 @@ struct ChartView: View {
                         .foregroundColor(.white)
                 }
             }
+            
         }
+        .frame(width: .infinity, height: 250)
         .padding()
     }
 }

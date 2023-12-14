@@ -13,6 +13,7 @@ struct ExpenseItem: Identifiable, Codable {
     let type : String
     let amount : Double
     let category : String
+    let date : Date
     var icon : String {
         switch category {
         case "Food" :
@@ -58,17 +59,10 @@ struct ContentView: View {
                     }
                     .onDelete(perform: delete)
                 } header: {
-                    Text("Personal")
+                    Text("Recent Transactions")
                 }
                 
-                Section {
-                    ForEach(expenses.business, id: \.id){ expense in
-                        ExpenseView(expense: expense)
-                    }
-                    .onDelete(perform: delete)
-                } header: {
-                    Text("Business")
-                }
+                
 
                 // Key note : onDelete only in ForEach. ForEach handles passing the index of the current row
                 // we want to delete to the indexSet which is then called to delete that row.
@@ -103,11 +97,20 @@ struct ContentView: View {
 struct ExpenseView : View {
     var expense : ExpenseItem
     
+    
     var body: some View {
         HStack {
-            Label(expense.name, systemImage: expense.icon)
+            VStack {
+                
+                Label(expense.name, systemImage: expense.icon)
+            }
             Spacer()
-            Text(expense.amount, format: .currency(code: "USD"))
+            VStack(alignment: .trailing) {
+                
+                Text(expense.amount, format: .currency(code: "USD"))
+                Text(expense.date, format: Date.FormatStyle(date: .abbreviated, time: .omitted))
+                    .font(.caption)
+            }
         }
     }
 }
