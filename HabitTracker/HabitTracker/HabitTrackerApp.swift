@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct HabitTrackerApp: App {
+    
+    @State private var habitStore = HabitStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+        // add this to the environment variable so all subviews
+        // can access it using @Environment property wrapper
+            LandingView()
+                .environment(habitStore)
         }
     }
 }

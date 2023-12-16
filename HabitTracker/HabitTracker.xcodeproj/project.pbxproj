@@ -11,10 +11,14 @@
 		8CC000B12B2BF2F400980DA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000B02B2BF2F400980DA1 /* ContentView.swift */; };
 		8CC000B32B2BF2F600980DA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC000B22B2BF2F600980DA1 /* Assets.xcassets */; };
 		8CC000B62B2BF2F600980DA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC000B52B2BF2F600980DA1 /* Preview Assets.xcassets */; };
-		8CC000BD2B2BF41100980DA1 /* HabitDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000BC2B2BF41100980DA1 /* HabitDataModel.swift */; };
+		8CC000BD2B2BF41100980DA1 /* HabitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000BC2B2BF41100980DA1 /* HabitStore.swift */; };
 		8CC000BF2B2BF4FB00980DA1 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000BE2B2BF4FB00980DA1 /* LandingView.swift */; };
 		8CC000C12B2C139200980DA1 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000C02B2C139200980DA1 /* DateView.swift */; };
 		8CC000C32B2C2B8C00980DA1 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000C22B2C2B8C00980DA1 /* Habit.swift */; };
+		8CC000C52B2CC2E200980DA1 /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000C42B2CC2E100980DA1 /* HabitsView.swift */; };
+		8CC000C72B2CC2F300980DA1 /* AddHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000C62B2CC2F300980DA1 /* AddHabitsView.swift */; };
+		8CC000C92B2CFBFE00980DA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000C82B2CFBFE00980DA1 /* HomeView.swift */; };
+		8CC000CB2B2D45AC00980DA1 /* DateRoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC000CA2B2D45AC00980DA1 /* DateRoundedRectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +27,14 @@
 		8CC000B02B2BF2F400980DA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CC000B22B2BF2F600980DA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC000B52B2BF2F600980DA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8CC000BC2B2BF41100980DA1 /* HabitDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDataModel.swift; sourceTree = "<group>"; };
+		8CC000BC2B2BF41100980DA1 /* HabitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStore.swift; sourceTree = "<group>"; };
 		8CC000BE2B2BF4FB00980DA1 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		8CC000C02B2C139200980DA1 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		8CC000C22B2C2B8C00980DA1 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		8CC000C42B2CC2E100980DA1 /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
+		8CC000C62B2CC2F300980DA1 /* AddHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitsView.swift; sourceTree = "<group>"; };
+		8CC000C82B2CFBFE00980DA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8CC000CA2B2D45AC00980DA1 /* DateRoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRoundedRectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +67,12 @@
 		8CC000AD2B2BF2F400980DA1 /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8CC000CC2B2E263100980DA1 /* Views */,
 				8CC000AE2B2BF2F400980DA1 /* HabitTrackerApp.swift */,
-				8CC000B02B2BF2F400980DA1 /* ContentView.swift */,
-				8CC000BC2B2BF41100980DA1 /* HabitDataModel.swift */,
-				8CC000C02B2C139200980DA1 /* DateView.swift */,
-				8CC000BE2B2BF4FB00980DA1 /* LandingView.swift */,
+				8CC000BC2B2BF41100980DA1 /* HabitStore.swift */,
+				8CC000C22B2C2B8C00980DA1 /* Habit.swift */,
 				8CC000B22B2BF2F600980DA1 /* Assets.xcassets */,
 				8CC000B42B2BF2F600980DA1 /* Preview Content */,
-				8CC000C22B2C2B8C00980DA1 /* Habit.swift */,
 			);
 			path = HabitTracker;
 			sourceTree = "<group>";
@@ -77,6 +83,20 @@
 				8CC000B52B2BF2F600980DA1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CC000CC2B2E263100980DA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CC000B02B2BF2F400980DA1 /* ContentView.swift */,
+				8CC000C42B2CC2E100980DA1 /* HabitsView.swift */,
+				8CC000C62B2CC2F300980DA1 /* AddHabitsView.swift */,
+				8CC000C82B2CFBFE00980DA1 /* HomeView.swift */,
+				8CC000C02B2C139200980DA1 /* DateView.swift */,
+				8CC000CA2B2D45AC00980DA1 /* DateRoundedRectangleView.swift */,
+				8CC000BE2B2BF4FB00980DA1 /* LandingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,11 +169,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC000C92B2CFBFE00980DA1 /* HomeView.swift in Sources */,
+				8CC000CB2B2D45AC00980DA1 /* DateRoundedRectangleView.swift in Sources */,
 				8CC000C32B2C2B8C00980DA1 /* Habit.swift in Sources */,
 				8CC000C12B2C139200980DA1 /* DateView.swift in Sources */,
 				8CC000BF2B2BF4FB00980DA1 /* LandingView.swift in Sources */,
+				8CC000C52B2CC2E200980DA1 /* HabitsView.swift in Sources */,
 				8CC000B12B2BF2F400980DA1 /* ContentView.swift in Sources */,
-				8CC000BD2B2BF41100980DA1 /* HabitDataModel.swift in Sources */,
+				8CC000BD2B2BF41100980DA1 /* HabitStore.swift in Sources */,
+				8CC000C72B2CC2F300980DA1 /* AddHabitsView.swift in Sources */,
 				8CC000AF2B2BF2F400980DA1 /* HabitTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
